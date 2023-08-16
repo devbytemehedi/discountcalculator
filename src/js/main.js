@@ -1,13 +1,16 @@
-function getElementAmmountById(elementId) {
-  const elementField = document.getElementById(elementId);
-  const elementValue = elementField.innerText;
-  const elementAmmount = parseInt(elementValue);
-  return elementAmmount;
-}
-function setElementValueById(elementId, newValue) {
-  const elementField = document.getElementById(elementId);
-  elementField.innerText = newValue;
-}
+document
+  .getElementById("discount-input")
+  .addEventListener("keyup", function () {
+    const button = document.getElementById("btn-discount");
+    const inputField = document.getElementById("discount-input");
+    const inputValue = inputField.value;
+    if (inputValue === "DISC30") {
+      button.removeAttribute("disabled");
+    } else {
+      button.setAttribute("disabled", "true");
+    }
+  });
+
 document.getElementById("btn-discount").addEventListener("click", function () {
   const price = getElementAmmountById("price");
   const discountAmmount = price * 0.3;
@@ -22,4 +25,7 @@ document.getElementById("btn-discount").addEventListener("click", function () {
   discountText.classList.add("text-[#9223D0]");
   const button = event.target;
   button.disabled = true;
+  const inputField = document.getElementById("discount-input");
+  inputField.value = "";
+  inputField.setAttribute("disabled", "true");
 });

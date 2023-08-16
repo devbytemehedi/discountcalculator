@@ -40,15 +40,15 @@
           />
         </div>
         <div class="text p-8">
-          <h1 class="text-4xl text-slate-300 font-black mb-8">
+          <h1 class="text-3xl text-slate-300 font-black mb-3">
             Programming Hero
           </h1>
           <h2
-            class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-3xl"
+            class="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 text-2xl"
           >
             Complete Web Development Course With Jhankar Mahbub
           </h2>
-          <h4 class="my-5 font-bold text-[#333343]">ঝংকার মাহবুব</h4>
+          <h4 class="my-3 font-bold text-[#333343]">ঝংকার মাহবুব</h4>
           <div class="flex justify-start gap-4 my-5">
             <p id="price-text" class="text-[#9223D0] text-xl font-bold">
               ৳<span id="price">5500</span>
@@ -57,18 +57,28 @@
               id="discount-text"
               class="text-[#333343] text-xl font-bold hidden"
             >
-              ৳<span id="discount">0</span>
+              ৳<span id="discount">0000</span>
             </p>
           </div>
+          <input
+            id="discount-input"
+            type="text"
+            class="input w-full max-w-xs mb-5 text-slate-500 bg-[#0e101f] disabled:bg-[#0e101f] disabled:border-none"
+          />
           <div class="flex justify-between">
-            <button id="btn-discount" class="btn btn-neutral">
-              Apply 30% Off
+            <button
+              id="btn-discount"
+              class="btn btn-neutral capitalize disabled:text-gray-700"
+              disabled
+            >
+              Apply Coupon
             </button>
-            <button class="btn btn-primary">কোর্সটি কিনুন</button>
+            <button class="btn btn-primary capitalize">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
-    <script src="./main.js"></script>
+    <script src="./js/utilies.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
